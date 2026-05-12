@@ -65,7 +65,7 @@ export default function Hero() {
           className="hidden md:block flex-shrink-0"
           style={{ transform: 'rotate(6deg) translateY(24px)', transformOrigin: 'bottom center' }}
         >
-          <PhoneFrame className="w-52" style={{}}>
+          <PhoneFrame className="w-52">
             <img
               src="/screenshots/image1.jpg"
               alt="Speako drill screen"
