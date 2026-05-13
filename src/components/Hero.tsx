@@ -67,7 +67,7 @@ export default function Hero() {
         >
           <PhoneFrame className="w-52">
             <img
-              src={`${import.meta.env.BASE_URL}screenshots/image1.jpg`}
+              src="/screenshots/image1.jpg"
               alt="Speako drill screen"
               className="w-full h-full object-cover"
               style={{ height: 420 }}
@@ -79,7 +79,7 @@ export default function Hero() {
         <div className="flex-shrink-0 z-10">
           <PhoneFrame className="w-64 md:w-72">
             <video
-              src={`${import.meta.env.BASE_URL}speako-content/speako-demo.mp4`}
+              src="/speako-content/speako-demo.mp4"
               autoPlay
               loop
               muted
@@ -97,7 +97,7 @@ export default function Hero() {
         >
           <PhoneFrame className="w-52">
             <img
-              src={`${import.meta.env.BASE_URL}screenshots/image2.jpg`}
+              src="/screenshots/image2.jpg"
               alt="Speako progress screen"
               className="w-full h-full object-cover"
               style={{ height: 420 }}
