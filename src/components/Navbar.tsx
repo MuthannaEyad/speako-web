@@ -4,9 +4,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2.5">
-          <div className="w-9 h-9 rounded-full bg-[#3CC84A] flex items-center justify-center">
-            <span className="text-white font-extrabold text-lg leading-none">S</span>
-          </div>
+          <img src="/logo.png" alt="Speako" className="w-9 h-9 rounded-xl" />
           <span className="font-bold text-[#0D0F1A] text-lg tracking-tight">Speako</span>
         </div>
 
