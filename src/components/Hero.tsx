@@ -75,19 +75,17 @@ export default function Hero() {
           </PhoneFrame>
         </div>
 
-        {/* Center phone — video, straight */}
+        {/* Center phone — video, no frame */}
         <div className="flex-shrink-0 z-10">
-          <PhoneFrame className="w-64 md:w-72">
-            <video
-              src="/speako-content/speako-demo.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full object-cover"
-              style={{ height: 520 }}
-            />
-          </PhoneFrame>
+          <video
+            src="/speako-content/speako-demo.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-64 md:w-72 object-cover rounded-3xl phone-shadow"
+            style={{ height: 520 }}
+          />
         </div>
 
         {/* Right phone — image2.jpg, tilted left */}
