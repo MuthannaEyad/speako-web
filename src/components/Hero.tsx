@@ -59,24 +59,35 @@ export default function Hero() {
       </div>
 
       {/* Phone mockups */}
-      <div className="relative mt-16 flex items-end justify-center gap-4 px-4">
-        {/* Left phone — image1.jpg, tilted right */}
+      <div className="relative mt-16 mx-auto" style={{ height: 560, width: '100%', maxWidth: 900 }}>
+
+        {/* Left phone — overlaps center from left */}
         <div
-          className="hidden md:block flex-shrink-0"
-          style={{ transform: 'rotate(6deg) translateY(24px)', transformOrigin: 'bottom center' }}
+          className="hidden md:block absolute"
+          style={{
+            left: '50%',
+            marginLeft: -340,
+            bottom: 0,
+            transform: 'rotate(6deg)',
+            transformOrigin: 'bottom center',
+            zIndex: 1,
+          }}
         >
           <PhoneFrame className="w-52">
             <img
               src="/screenshots/image1.jpg"
               alt="Speako drill screen"
-              className="w-full h-full object-cover"
+              className="w-full object-cover"
               style={{ height: 420 }}
             />
           </PhoneFrame>
         </div>
 
-        {/* Center phone — video, no frame */}
-        <div className="flex-shrink-0 z-10">
+        {/* Center — video, on top */}
+        <div
+          className="absolute left-1/2 -translate-x-1/2 bottom-0"
+          style={{ zIndex: 2 }}
+        >
           <video
             src="/speako-content/speako-demo.mp4"
             autoPlay
@@ -84,24 +95,32 @@ export default function Hero() {
             muted
             playsInline
             className="w-64 md:w-72 object-cover rounded-3xl phone-shadow"
-            style={{ height: 520 }}
+            style={{ height: 540 }}
           />
         </div>
 
-        {/* Right phone — image2.jpg, tilted left */}
+        {/* Right phone — overlaps center from right */}
         <div
-          className="hidden md:block flex-shrink-0"
-          style={{ transform: 'rotate(-6deg) translateY(24px)', transformOrigin: 'bottom center' }}
+          className="hidden md:block absolute"
+          style={{
+            left: '50%',
+            marginLeft: 140,
+            bottom: 0,
+            transform: 'rotate(-6deg)',
+            transformOrigin: 'bottom center',
+            zIndex: 1,
+          }}
         >
           <PhoneFrame className="w-52">
             <img
               src="/screenshots/image2.jpg"
               alt="Speako progress screen"
-              className="w-full h-full object-cover"
+              className="w-full object-cover"
               style={{ height: 420 }}
             />
           </PhoneFrame>
         </div>
+
       </div>
     </section>
   )
