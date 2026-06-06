@@ -83,20 +83,22 @@ export default function Hero() {
           </PhoneFrame>
         </div>
 
-        {/* Center — video, on top */}
+        {/* Center — video in phone frame, on top */}
         <div
           className="absolute left-1/2 -translate-x-1/2 bottom-0"
           style={{ zIndex: 2 }}
         >
-          <video
-            src="/speako-content/speako-demo.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-64 md:w-72 object-cover rounded-3xl phone-shadow"
-            style={{ height: 540 }}
-          />
+          <PhoneFrame className="w-64 md:w-72">
+            <video
+              src="/speako-content/speako-demo.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full object-cover"
+              style={{ height: 540 }}
+            />
+          </PhoneFrame>
         </div>
 
         {/* Right phone — overlaps center from right */}
